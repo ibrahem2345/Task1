@@ -1,0 +1,11 @@
+<div class="user-list" style="display: flex; justify-content: center; align-items: center;">
+    <mat-card *ngFor="let user of users" (click)="viewUserDetails(user.id)" style="margin: 4px;">
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <img mat-card-sm-image [src]="user.avatar" alt="Avatar" />
+      </div>
+      
+      <mat-card-title style="text-align: center;">{{ user.first_name }} {{ user.last_name }}</mat-card-title>
+    </mat-card>
+</div>
+<mat-paginator [length]="totalUsers" [pageSize]="6" (page)="onPageChange($event)"></mat-paginator>
+  
