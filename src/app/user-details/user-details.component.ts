@@ -21,7 +21,7 @@ export class UserDetailsComponent implements OnInit {
     this.apiService.getUserById(userId).subscribe((data) => (this.user = data.data));
   }
   goBack(): void {
-    this.location.back(); // Use Location to navigate to the previous page
+    this.location.back();
   }
   
 

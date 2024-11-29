@@ -1,5 +1,5 @@
 import { Component, Output, EventEmitter } from '@angular/core';
-import { SharedService } from '../services/shared.service'; // Import the SearchService
+import { SharedService } from '../services/shared.service'; 
 
 @Component({
   selector: 'app-header',
@@ -7,12 +7,12 @@ import { SharedService } from '../services/shared.service'; // Import the Search
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-  @Output() searchUser = new EventEmitter<string>(); // You can remove this if using the service
+  @Output() searchUser = new EventEmitter<string>(); 
 
   constructor(private searchService: SharedService) {}
 
   onSearch(event: any): void {
     const searchTerm = event.target.value;
-    this.searchService.setSearchTerm(searchTerm); // Pass the search term to the service
+    this.searchService.setSearchTerm(searchTerm); 
   }
 }

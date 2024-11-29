@@ -6,9 +6,9 @@ import { Subject } from 'rxjs';
 })
 export class SharedService {
   private searchSource = new Subject<string>();
-  search$ = this.searchSource.asObservable(); // Observable to subscribe to in the UserListComponent
+  search$ = this.searchSource.asObservable();
 
   setSearchTerm(term: string): void {
-    this.searchSource.next(term); // Emit the new search term
+    this.searchSource.next(term);
   }
 }
